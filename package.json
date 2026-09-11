@@ -1,0 +1,17 @@
+{
+  "name": "ytdl-api",
+  "version": "1.0.0",
+  "description": "Production ready yt-dlp direct extraction API",
+  "main": "index.js",
+  "scripts": {
+    "server": "node index.js",
+    "tunnel": "cloudflared tunnel --url http://localhost:3000",
+    "start": "concurrently \"npm run server\" \"npm run tunnel\""
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
